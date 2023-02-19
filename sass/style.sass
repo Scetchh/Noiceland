@@ -1,0 +1,199 @@
+@import normalize.scss
+@import reset.scss
+@import variable.sass
+@import variable.sass
+@import mixins.sass
+
+html
+    font-size: 62.5%
+.content-container
+    padding: 0rem 12rem
+.section-header
+    margin: 0 auto
+.header
+    padding: 3.5rem 0rem
+    border-bottom: .1rem solid #E5E5E5
+    margin-bottom: 6rem
+    display: flex
+    justify-content: space-between
+    &__logo
+        width: 13.5rem
+        height: 1.7rem
+    &__nav
+        
+    &__link
+        font-family: 'Libre Franklin', sans-serif
+        font-weight: 400
+        &:link, &:visited
+            text-decoration: none
+            font-size: 1.4rem
+            font-weight: 400
+            color: $color-black
+        &:not(:last-child)
+            margin-right: 4rem
+
+.section-main
+.welcome
+    margin-bottom: 3.6rem
+    &__box
+        display: grid
+        grid-template-columns: 2fr 1fr
+        // justify-items: start
+    &__img
+        grid-column: 1 / 2
+        width: 100%
+    &__descr
+        padding: 0 0 0 5rem
+    &__paragraph
+        @include paragraph
+        &_big
+            font-family: 'Source Serif Pro', serif
+            font-weight: 400
+            font-size: 1.6rem
+            line-height: 2.4rem
+            margin-bottom: 2.7rem
+            color: #666
+        &_author
+            @include paragraph-author
+    &__title
+        font-size: 3.6rem
+        line-height: 4.2rem
+        margin-bottom: 2.7rem
+        font-family: 'Tenor Sans', sans-serif
+        font-weight: 400
+        text-transform: uppercase
+
+.section-news
+    margin-bottom: 6.5rem
+.news
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr))
+    grid-template-rows: 1fr 1fr
+    grid-gap: 5rem 1rem
+    align-items: center
+    &__img
+        width: 100%
+        height: 100%
+    &__paragraph
+        @include paragraph
+        &_big
+            @include paragraph-big
+        &_author
+            @include paragraph-author
+    
+.border
+    border-bottom: .1rem solid #E5E5E5
+    margin-bottom: 9rem
+    &_footer
+        margin-bottom: 6rem
+
+.posts
+    text-align: center
+    margin-bottom: 9rem
+    position: relative
+    &__title
+        @include paragraph
+        position: absolute
+        left: 0rem
+        top: -3rem
+    &-box
+        text-align: left
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr))
+        grid-template-rows: 1fr 1fr
+        grid-gap: 5rem 1rem
+        align-items: center
+        margin-bottom: 7rem
+
+.button
+    text-transform: uppercase
+    width: 20%
+    padding: 1.5rem
+    font-size: 1rem
+    letter-spacing: .1rem
+    line-height: 1.2rem
+    color: $color-black
+    
+.featured
+    margin-bottom: 9rem
+    &__title
+        @include paragraph
+    &-box
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr))
+        // grid-template-rows: 1fr 1fr
+        grid-gap: 5rem 1rem
+        align-items: center
+
+.footer
+    // width: 99vw
+    height: 40vw
+    background-color: #141414
+    padding: 9rem 12rem
+    &__title
+        margin-bottom: 6rem
+    &__logo
+        margin-right: 1.5rem
+    &__paragraph
+        display: inline-block
+        color: #666
+        text-transform: uppercase
+        font-size: 1rem
+        line-height: 1.2rem
+        letter-spacing: .1rem
+        margin-bottom: 2rem
+    &__nav
+        margin-bottom: 4rem
+
+    &__information
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+        width: 64%
+
+.nav__list
+    text-decoration: none
+    list-style-type: none
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr))
+    grid-template-rows: 1fr 1fr
+    grid-gap: 1.5rem 10rem
+    width: 75%
+    &_info
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1fr 1fr
+        grid-gap: 1rem 0rem
+        width: 51vw
+        justify-items: start
+.nav__item
+    color: #fff
+    font-size: 1.4rem
+    line-height: 2.4rem
+
+.form
+    display: inline
+    position: relative
+    &__group
+    &__input
+        width: 55%
+        padding: 1.5rem 1.5rem
+        font-size: 1rem
+        line-height: 1.2rem
+    &__button
+        padding: 1.5rem
+        background-color: #000
+        color: #fff
+    &__paragraph
+        @include paragraph-author
+        color: #666
+        font-weight: 400
+        letter-spacing: .1rem
+        position: absolute
+        left: 0rem
+        top: -3rem
+
+
+.flex
+    display: flex
+    justify-content: space-between
+
